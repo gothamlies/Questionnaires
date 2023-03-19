@@ -1,0 +1,30 @@
+﻿<Window x:Class="Questionnaires.MainPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Questionnaires"
+        mc:Ignorable="d"
+        Title="MainPage" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Grid.Column="0" Margin="10" Header="Авторизация"  Foreground="Purple" BorderBrush="#FF9416BB" FontSize="16" FontWeight="Bold">
+            <StackPanel Name="Authorization" Grid.Column="0"  Margin="10" Background="#FFE7F3F2" DataContext="{Binding NewSpeciality}">
+                <Button Name="TeacherAuthorizationss" Content="Как преподаватель" Margin="10 80 10 0" Click="TeacherAuthorization"></Button>
+                <Button Name="StudentAuthorizationss" Content="Как студент" Margin="10 90 10 0" Click="StudentAuthorization"></Button>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Column="1" Margin="10" Header="Регистрация"  Foreground="Purple" BorderBrush="#FF9416BB" FontSize="16" FontWeight="Bold">
+            <StackPanel Name="NewAccounts" Grid.Column="1" Margin="10" Background="#FFE7F3F2" DataContext="{Binding NewGroups}">
+                <Button Name="TeacherRegestrationss" Content="Как преподаватель" Margin="10 80 10 0" Click="TeacherRegestration"></Button>
+                <Button Name="StudentRegestrationss" Content="Как студент" Margin="10 90 10 0" Click="StudentRegestration"></Button>
+            </StackPanel>
+        </GroupBox>
+        <Frame Grid.Row="1" Name="MainFrame" NavigationUIVisibility="Hidden"></Frame>
+    </Grid>
+</Window>
